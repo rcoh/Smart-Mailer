@@ -6,11 +6,8 @@ in the grt list.
 
 climbers.intersect.ec-discuss would send to all members who are on both climbers and ec-discuss.
 
-The service is currently hosted at mitsmartmail@gmail.com.  To send messages to it use
-mitsmartmail+yourconstraints@gmail.com -- eg: mitsmartmail+conner5.minus.grts@gmail.com
-
-The service is absolutley and completely use at your own risk.  YOU PROBABLY SHOULDN'T USE IT AT
-ALL.
+You need to provide your own POP3 and SMTP servers (or use gmail).  It reads information after the "+" in the address.
+You should send mail to myaddress+constraints@myserver.com to user it.  
 
 The python code contained is designed to read from a POP3 address, perform the relevant transforms,
 the resends the message using an SMTP address.
