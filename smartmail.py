@@ -5,12 +5,19 @@ import time
 import email # new statement
 from email import parser
 
+POP_SERVER = "pop_server_here"
+POP_USER = "pop_user_here"
+POP_PASS = "pop_pass_here"
+
+SMTP_SERVER = "smtp_server_here"
+SMTP_USER = "smtp_user_here"
+SMTP_PASS = "smtp_pass_here"
+
 def get_new_messages():
-  host = "pop.gmail.com"
-  mail = poplib.POP3_SSL(host)
+  mail = poplib.POP3_SSL(POP_SERVER)
   mail.getwelcome()
-  mail.user("mitsmartmail@gmail.com")
-  mail.pass_("raptor-mail")
+  mail.user(POP_USER)
+  mail.pass_(POP_PASS)
 
   numMessages = len(mail.list()[1])
   messages = []
@@ -39,9 +46,9 @@ def process_message(message):
 
 def send_msg(fromaddr, toaddrs, message):
   import pdb; pdb.set_trace()
-  server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+  server = smtplib.SMTP_SSL(SMTP_SERVER, 465)
   #server = smtplib.SMTP_SSL('outgoing.mit.edu', 587)
-  server.login('mitsmartmail@gmail.com', 'raptor-mail')
+  server.login(SMTP_USER, SMTP_PASS)
   server.set_debuglevel(1)
   server.sendmail(fromaddr, toaddrs, message.as_string())
   server.quit()
