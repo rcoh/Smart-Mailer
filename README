@@ -1,0 +1,19 @@
+Smartmailer is an intelligent emailer designed for MIT moira-based email lists.  It allows you to send messages to
+intersections and differences of lists and users.  
+For example:
+conner5.minus.grts would send to all members of conner5 /except/ the members of conner5 who are also
+in the grt list.
+
+climbers.intersect.ec-discuss would send to all members who are on both climbers and ec-discuss.
+
+The service is currently hosted at mitsmartmail@gmail.com.  To send messages to it use
+mitsmartmail+yourconstraints@gmail.com -- eg: mitsmartmail+conner5.minus.grts@gmail.com
+
+The service is absolutley and completely use at your own risk.  YOU PROBABLY SHOULDN'T USE IT AT
+ALL.
+
+The python code contained is designed to read from a POP3 address, perform the relevant transforms,
+the resends the message using an SMTP address.
+
+It only works on public lists.  It will deference lists -- messages get CCed to lots of individual
+addresses.
