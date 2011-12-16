@@ -1,3 +1,7 @@
+Copyright (C) 2011  Russell Cohen <rcoh@mit.edu>,
+
+See the end of the file for license conditions.
+
 Smartmailer is an intelligent emailer designed for MIT moira-based email lists.  It allows you to send messages to
 intersections and differences of lists and users.  
 For example:
@@ -17,3 +21,19 @@ the resends the message using an SMTP address.
 
 It only works on public lists.  It will deference lists -- messages get CCed to lots of individual
 addresses.
+
+This file is part of Smart-Mailer.
+
+Smart-Mailer is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+Smart-Mailer is distributed in the hope that it will be
+useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Smart-Mailer.  If not, see
+<http://www.gnu.org/licenses/>.
